@@ -1,0 +1,22 @@
+.store {
+  display: flex;
+  background-color: black;
+  padding: 0.5rem;
+  width: 12.5rem;
+  border: 1px solid var(--borderColor1);
+  border-radius: 5px;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  font-size: 0.5rem;
+  font-weight: 400;
+  margin-bottom: -0.4rem;
+}
+
+.title-container {
+  margin-left: 0.5rem;
+}

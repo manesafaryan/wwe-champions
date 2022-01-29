@@ -1,0 +1,14 @@
+.container {
+    display: grid;
+    background-color: var(--bcgColor1);
+    height: 100vh;
+    grid-template-columns: 15rem 1fr 15rem;
+    grid-template-rows: 4.5rem 1fr;
+}
+
+.main {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}

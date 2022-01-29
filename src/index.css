@@ -1,0 +1,44 @@
+:root {
+  --bcgColor1: #1b1e37;
+  --blue: #00baff;
+  --bcgColor2: #18ace2;
+  --bcgColor3: #1f233f;
+  --rhino: #343961;
+  --quartz: #E2E4F5;
+  --borderColor1: rgb(173, 173, 173);
+  --borderColor2: #31365e;
+  --bcgColor4: #18ace2;
+  --borderColor3: #4f5794;
+  --textColor1: #6a73b5;
+  --textColor2: #4f5794;
+  --svgColor1: #12eeb1;
+  --textHoverColor1: #12eeb1;
+  --borderColor4: #12eeb1;
+  --textColor3: #00baff;
+  --bcgColor5: #272b4a;
+  --textColor4: #4f5794;
+  --borderColor5: #4f5794;
+
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+path {
+  pointer-events: all;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}

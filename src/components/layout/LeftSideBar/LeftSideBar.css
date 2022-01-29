@@ -1,0 +1,171 @@
+.left-sidebar {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  background-color: var(--bcgColor3);
+  opacity: 1;
+  z-index: 1;
+  overflow-y: scroll;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.left-sidebar::-webkit-scrollbar {
+  display: none;
+}
+
+.main-nav {
+  width: 100%;
+}
+
+.button-container {
+  position: -webkit-sticky;
+  position: sticky;
+  display: flex;
+  top: 0;
+  align-items: center;
+  justify-content: center;
+  height: 3.2rem;
+  margin-bottom: 2.1rem;
+  z-index: 5;
+}
+
+.play-button {
+  border-radius: 5px;
+  border: 1px solid var(--blue);
+  background-color: transparent;
+  font-size: 0.85rem;
+  height: 3.2rem;
+  width: 12.5rem;
+  cursor: pointer;
+  padding: 1rem;
+  color: var(--blue);
+  transition: 0.5s all;
+}
+
+.btn-primary {
+  background-color: var(--blue);
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+.play-button_icon::before {
+  content: "\e90b";
+}
+
+.forum-logo-container {
+  border-left: none;
+  border-right: none;
+  border-top: 1px solid var(--borderColor2);
+  border-bottom: 1px solid var(--borderColor2);
+  padding: 1.5rem;
+  width: 12.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.forum-link {
+  color: var(--quartz);
+  font-size: 0.8rem;
+}
+
+.forum-logo {
+  border-radius: 5px;
+  background-color: var(--borderColor2);
+  padding: 1rem;
+  border: 1px solid var(--textColor1);
+  width: 12.5rem;
+  transition: 0.5s all;
+}
+
+.forum-logo:hover {
+  background-color: var(--bcgColor3);
+}
+
+.stores-container {
+  border-top: none;
+  margin-bottom: 3.5rem;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1.5rem;
+  border-bottom: 1px solid var(--borderColor2);
+}
+
+.themeBtn-container {
+  display: flex;
+  padding: 0.2rem;
+  height: 3rem;
+  width: 12.5rem;
+  border: 1px solid var(--borderColor2);
+  border-radius: 5px;
+  justify-content: space-around;
+  background-color: transparent;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.switch-btn {
+  position: absolute;
+  background-color: var(--bcgColor4);
+  border-radius: 8px;
+  height: 90%;
+  width: 49%;
+  display: flex;
+  justify-content: center;
+  left: 3%;
+}
+
+.dark,
+.light {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: var(--borderColor3);
+  width: 50%;
+  padding: 0.7rem;
+  font-size: 0.9rem;
+  height: 100%;
+  z-index: 5;
+}
+
+.light {
+  margin-left: 0.5rem;
+  color: white;
+}
+
+.goToRight {
+  animation: goRight 0.5s forwards;
+}
+
+.goToLeft {
+  animation: goLeft 0.5s forwards;
+}
+
+@keyframes goRight {
+  from {
+    left: 3%;
+  }
+
+  to {
+    left: 48%;
+  }
+}
+
+@keyframes goLeft {
+  from {
+    left: 48%;
+  }
+
+  to {
+    left: 3%;
+  }
+}

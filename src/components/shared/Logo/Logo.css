@@ -1,0 +1,32 @@
+.logo-container {
+  margin-bottom: 1.5rem;
+  display: flex;
+  padding-top: 1.3rem;
+  width: 85%;
+  align-items: center;
+}
+
+.image {
+  height: 45px;
+  width: 45px;
+}
+
+.home-page {
+  margin-left: .5rem;
+  font-size: .8rem;
+  color: var(--quartz);
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+}
+
+.home-page__title {
+  cursor: pointer;
+}
+
+.official-page {
+  color: var(--blue);
+}
+
+.official-page::before {
+  content: "\e95d";
+}

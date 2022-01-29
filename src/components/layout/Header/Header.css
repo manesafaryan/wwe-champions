@@ -1,0 +1,41 @@
+.main-header {
+  position: fixed;
+  background: transparent;
+  padding: 1.15rem;
+  width: 100vw;
+}
+
+.search {
+  background-color: var(--bcgColor5);
+  border-radius: 0.3rem;
+  display: flex;
+  align-items: center;
+  margin-left: 15.8rem;
+  height: 2.3rem;
+  width: 28%;
+  padding-left: 1rem;
+  transition: border 2s;
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  background-color: var(--bcgColor5);
+  color: var(--textColor4);
+  outline: none;
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 100;
+  width: 100%;
+  margin-left: 0.5rem;
+}
+
+.search-input::placeholder {
+  color: var(--textColor4);
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 600;
+}
+
+.search:hover {
+  border: 1px solid var(--borderColor5);
+}
