@@ -5,7 +5,7 @@ export default function Logo() {
     <div className="logo-container">
         <img
           className="image"
-          src={require("../../../assets/icons/logo/wwe-logo.png")}
+          src={require("../../../assets/logo/wwe-logo.png")}
           alt=""
         />
         <div className="home-page">

@@ -11,14 +11,21 @@
   --borderColor3: #4f5794;
   --textColor1: #6a73b5;
   --textColor2: #4f5794;
-  --svgColor1: #12eeb1;
+  --navItemColor: #12eeb1;
   --textHoverColor1: #12eeb1;
   --borderColor4: #12eeb1;
   --textColor3: #00baff;
   --bcgColor5: #272b4a;
   --textColor4: #4f5794;
   --borderColor5: #4f5794;
-
+  --textColor4: #B4BAE9;
+  --bcgColor6: #E6ECF5;
+  --borderColor6: #C0CADB;
+  --bcgColor7: #31365e;
+  --borderColor7: #6a73b5;
+  --borderColor8: #343961;
+  --textColor5: #E2E4F5;
+  --textColor6: #a6acdc;
 }
 
 * {
@@ -42,3 +49,4 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+

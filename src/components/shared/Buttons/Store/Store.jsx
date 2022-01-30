@@ -2,7 +2,6 @@ import "./Store.css"
 
 export default function Store({ title, store, link, icon }) {
   return (
-    <div className="store-container">
       <a
         className="store"
         href={link}
@@ -14,6 +13,5 @@ export default function Store({ title, store, link, icon }) {
           <p>{store}</p>
         </div>
       </a>
-    </div>
   );
 }

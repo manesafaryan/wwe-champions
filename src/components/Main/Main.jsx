@@ -6,33 +6,35 @@ import Header from "../layout/Header/Header";
 import Home from "../../pages/Home/Home";
 import "./Main.css";
 
+const events = {
+  today: [
+    { title: "Color Clash-Red", about: "Ends on January-31 at 03:00 AM" },
+    {
+      title: `Bret Hart's "I am" Tour`,
+      about: "Ends on January-31 at 10:00 AM",
+    },
+  ],
+
+  tomorrow: [
+    {
+      title: "King's Weekly - VICTORY TO",
+      about: "Ends on February-07 at 12:00 PM",
+    },
+  ],
+};
+
 export default function Main() {
-  const [theme, setTheme] = useState("Dark");
-
-  const switchToLight = () => {
-    setTheme("Light");
-  };
-
-  const switchToDark = () => {
-    setTheme("Dark");
-  };
-
   return (
     <Router>
       <div className="container">
-        <LeftSideBar
-          toLight={switchToLight}
-          toDark={switchToDark}
-          theme={theme}
-        />
+        <LeftSideBar />
         <Header />
         <main className="main">
-          {/*<Routes>
+          <Routes>
             <Route exact path="/" element={<Home />} />
-          </Routes>*/}
-          <Home />
+          </Routes>
         </main>
-        <RightSideBar />
+        <RightSideBar events={events}/>
       </div>
     </Router>
   );

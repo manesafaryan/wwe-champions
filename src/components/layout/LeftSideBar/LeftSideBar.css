@@ -3,13 +3,14 @@
   grid-row-end: 3;
   background-color: var(--bcgColor3);
   opacity: 1;
-  z-index: 1;
+  z-index: 10;
   overflow-y: scroll;
   top: 0;
   bottom: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
 }
 
 .left-sidebar::-webkit-scrollbar {
@@ -18,6 +19,7 @@
 
 .main-nav {
   width: 100%;
+  margin-bottom: 2rem;
 }
 
 .button-container {
@@ -28,34 +30,9 @@
   align-items: center;
   justify-content: center;
   height: 3.2rem;
-  margin-bottom: 2.1rem;
+  margin-bottom: 4rem;
   z-index: 5;
-}
-
-.play-button {
-  border-radius: 5px;
-  border: 1px solid var(--blue);
-  background-color: transparent;
-  font-size: 0.85rem;
-  height: 3.2rem;
-  width: 12.5rem;
-  cursor: pointer;
-  padding: 1rem;
-  color: var(--blue);
-  transition: 0.5s all;
-}
-
-.btn-primary {
-  background-color: var(--blue);
-  color: #fff;
-}
-
-a {
-  text-decoration: none;
-}
-
-.play-button_icon::before {
-  content: "\e90b";
+  padding-top: 2rem;
 }
 
 .forum-logo-container {
@@ -76,9 +53,9 @@ a {
 
 .forum-logo {
   border-radius: 5px;
-  background-color: var(--borderColor2);
+  background-color: var(--bcgColor7);
   padding: 1rem;
-  border: 1px solid var(--textColor1);
+  border: 1px solid var(--borderColor7);
   width: 12.5rem;
   transition: 0.5s all;
 }
@@ -92,10 +69,10 @@ a {
   margin-bottom: 3.5rem;
   width: 80%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-direction: column;
+  height: 100rem;
   align-items: center;
-  padding-top: 1.5rem;
   border-bottom: 1px solid var(--borderColor2);
 }
 
@@ -140,6 +117,7 @@ a {
 .light {
   margin-left: 0.5rem;
   color: white;
+  filter: brightness(5);
 }
 
 .goToRight {

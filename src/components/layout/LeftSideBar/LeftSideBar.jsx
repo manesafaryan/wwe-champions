@@ -6,10 +6,24 @@ import { apple, googlePlay, moon, sun } from "../../../assets/icons/icons";
 import { sideBarItems } from "../../constants/sidebar.constant";
 import Logo from "../../shared/Logo/Logo";
 import Store from "../../shared/Buttons/Store/Store";
+import PlayButton from "../../shared/Buttons/PlayButton/PlayButton";
+import useTheme from "../../../hooks/useTheme"
 
-export default function RightSideBar({ theme, toLight, toDark }) {
-  const [actives, setActives] = useState([false, false, false, false, false, false, false, false, false, false, false,]);
-
+export default function RightSideBar() {
+  const [actives, setActives] = useState([
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+  ]);
+  const [theme, setTheme] = useTheme("Dark")
   const [buttonClass, setButtonClass] = useState("");
   const sideBarRef = useRef();
   const buttonRef = useRef(null);
@@ -26,11 +40,11 @@ export default function RightSideBar({ theme, toLight, toDark }) {
   };
 
   const switchToDark = () => {
-    toDark();
+    setTheme("Dark");
   };
 
   const switchToLight = () => {
-    toLight();
+    setTheme("Light");
   };
 
   useEffect(() => {
@@ -39,6 +53,7 @@ export default function RightSideBar({ theme, toLight, toDark }) {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
 
   const activateItem = (index) => () => {
     setActives(actives.map((item, i) => i === index));
@@ -51,13 +66,8 @@ export default function RightSideBar({ theme, toLight, toDark }) {
     <aside ref={sideBarRef} className="left-sidebar">
       <Logo />
       <div className="button-container">
-        <Link to="/home">
-          <button className={"play-button" + ` ${buttonClass}`}>
-            <p className="play-button_icon">PLAY THE GAME</p>
-          </button>
-        </Link>
+        <PlayButton buttonClass={buttonClass} />
       </div>
-
       <nav className="main-nav">
         <ul className="nav-items">
           {sideBarItems.map((item, index) => (
@@ -82,9 +92,19 @@ export default function RightSideBar({ theme, toLight, toDark }) {
         </a>
       </div>
       <div className="stores-container">
-         <Store title="Download on the" store="App Store" icon={apple()} link="https://apps.apple.com/app/id1017432937?mt=8"/>
-         <Store title="Get it on" store="Google Play" icon={googlePlay()} link="https://play.google.com/store/apps/details?id=com.scopely.whiplash&referrer=adjust_reftag%3DcNQB4dJZR8V9a%26utm_source%3Dweb_acquisition_button_android"/>
-      </div> 
+        <Store
+          title="Download on the"
+          store="App Store"
+          icon={apple()}
+          link="https://apps.apple.com/app/id1017432937?mt=8"
+        />
+        <Store
+          title="Get it on"
+          store="Google Play"
+          icon={googlePlay()}
+          link="https://play.google.com/store/apps/details?id=com.scopely.whiplash&referrer=adjust_reftag%3DcNQB4dJZR8V9a%26utm_source%3Dweb_acquisition_button_android"
+        />
+      </div>
       <div className="themeBtn-container">
         <div className={"switch-btn " + switchClass}></div>
         <div className="dark" onClick={switchToDark}>

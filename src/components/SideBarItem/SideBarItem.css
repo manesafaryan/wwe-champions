@@ -7,7 +7,7 @@
   cursor: pointer;
   transition: 0.5s all;
   font-size: 0.875rem;
-  font-weight: 600;
+  font-weight: 400;
   width: 100%;
   position: relative;
   margin-bottom: .8rem;
@@ -24,19 +24,19 @@
 }
 
 .nav-item:hover .nav-item_icon {
-  fill: var(--svgColor1);
+  fill: var(--navItemColor);
 }
 
 .nav-item:hover {
-  color: var(--textHoverColor1);
+  color: var(--navItemColor);
 }
 
 .nav-item--active .nav-item_icon {
-  fill: var(--svgColor1);
+  fill: var(--navItemColor);
 }
 
 .nav-item--active {
-  color: var(--textHoverColor1);
+  color: var(--navItemColor);
 }
 
 .nav-item--active::before {
@@ -44,7 +44,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  border-left: 2px solid var(--borderColor4);
+  border-left: 2px solid var(--navItemColor);
   bottom: 0;
   width: 30px;
   height: 100%;
@@ -58,10 +58,11 @@
 .nav-item_new {
   display: inline-block;
   background-color: var(--rhino);
-  padding: 0.2rem 0.6rem;
+  padding: 0.1rem 0.6rem;
   border-radius: 0.3rem;
   margin-left: 1rem;
   font-size: 0.7rem;
   font-weight: 600;
   color: var( --textColor3);
+  border: 1px solid var(--borderColor8)
 }

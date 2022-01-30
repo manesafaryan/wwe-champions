@@ -1,8 +1,9 @@
 .main-header {
-  position: fixed;
   background: transparent;
   padding: 1.15rem;
-  width: 100vw;
+  background-color: var(--bcgColor1);
+  grid-column-start: 2;
+  grid-column-end: 3;
 }
 
 .search {
@@ -10,9 +11,9 @@
   border-radius: 0.3rem;
   display: flex;
   align-items: center;
-  margin-left: 15.8rem;
+  margin-left: .9rem;
   height: 2.3rem;
-  width: 28%;
+  width: 42%;
   padding-left: 1rem;
   transition: border 2s;
 }
@@ -31,9 +32,9 @@
 }
 
 .search-input::placeholder {
-  color: var(--textColor4);
+  color: var(--textColor2);
   font-family: "Poppins", sans-serif !important;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .search:hover {
