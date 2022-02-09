@@ -12,8 +12,8 @@
 }
 
 .home-page {
-  margin-left: .5rem;
-  font-size: .8rem;
+  margin-left: 0.5rem;
+  font-size: 0.8rem;
   color: var(--quartz);
   font-weight: 500;
   font-family: "Poppins", sans-serif;
@@ -27,6 +27,20 @@
   color: var(--blue);
 }
 
-.official-page::before {
+
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: "icomoon" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-verified::before {
   content: "\e95d";
 }

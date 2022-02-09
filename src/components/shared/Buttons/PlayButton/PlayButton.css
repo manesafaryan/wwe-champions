@@ -1,28 +1,29 @@
-    .play-button {
-    border-radius: 5px;
-    border: 1px solid var(--blue);
-    background-color: transparent;
-    font-size: 0.9rem;
-    height: 3.2rem;
-    width: 12.5rem;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
-    color: var(--blue);
-    transition: 0.5s all;
-  }
-  
-  .btn-primary {
-    background-color: var(--blue);
-    color: #fff;
-  }
-  
-  a {
-    text-decoration: none;
-  }
-  
-  .play-button_icon::before {
-    content: "\e90b";
-  }
+.play-button {
+  border-radius: 5px;
+  border: 1px solid var(--blue);
+  background-color: transparent;
+  font-size: 0.9rem;
+  height: 3.2rem;
+  width: 12.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  color: var(--blue);
+  transition: 0.5s all;
+}
+
+.btn-primary {
+  background-color: var(--blue);
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+.play-button_icon::before {
+  content: "\e90b";
+  font-family: "Font  Awesome 5 Free";
+}

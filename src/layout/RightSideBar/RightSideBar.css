@@ -1,0 +1,120 @@
+.right-sidebar {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  background-color: var(--bcgColor3);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow-y: scroll;
+  position: relative;
+}
+
+.events-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 4rem
+}
+
+.right-sidebar::-webkit-scrollbar {
+  display: none;
+}
+
+.login-btn {
+  margin-top: 0.9rem;
+  background: var(--blue);
+  border: none;
+  width: 15.5%;
+  padding: 0.75rem 0.8rem;
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  cursor: pointer;
+  position: fixed;
+}
+
+hr {
+  width: 85%;
+  border: none;
+  height: 1px;
+  background: var(--borderColor2);
+}
+
+.calendar-btn {
+  border: none;
+  background-color: var(--bcgColor5);
+  color: var(--textColor7);
+  border-radius: 5px;
+  width: 85%;
+  padding: 0.9rem 0rem;
+  color: var(--textColor2);
+  font-size: 0.95rem;
+  cursor: pointer;
+  margin-bottom: 3.5rem;
+}
+
+.right-sidebar footer {
+  width: 85%;
+  margin-bottom: 12rem;
+}
+
+.right-sidebar footer p {
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--textColor2);
+}
+
+label {
+  color: var(--quartz);
+}
+.right-sidebar footer p a {
+  transition: 0.3s all;
+  color: var(--blue);
+}
+
+.login-dropdown {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bcgColor7);
+  width: 15.5%;
+  padding: 1.6rem 0.7rem;
+  border-radius: 10px;
+  height: 9rem;
+  position: fixed;
+  margin-top: 4.7rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.login-dropdown__fb,
+.login-dropdown__scopely {
+  width: 100%;
+  height: 2.5rem;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.login-dropdown__fb {
+  background-color: var(--bcgColor8);
+}
+
+.login-dropdown__scopely {
+  background-color: var(--borderColor5);
+}
+
+.login-dropdown__triangle {
+  background-color: var(--bcgColor7);
+  height: 1rem;
+  width: 1rem;
+  margin-top: -2rem;
+  transform: rotate(45deg);
+}
+
+.d-none {
+  display: none;
+}

@@ -1,0 +1,46 @@
+.subscribe-form {
+    width: 85%;
+}
+
+.subscribe-form p {
+    font-size: .85rem;
+    font-weight: 400;
+    color: var(--textColor2)
+}
+
+.email {
+    border: none;
+    background-color: var(--bcgColor5);
+    border-radius: 5px;
+    width: 100%;
+    padding: .8rem 0rem;
+    margin: .8rem 0
+}
+
+.email::placeholder {
+    padding-left: 1rem;
+    color: var(--rhino);
+}
+
+.subscribe-form__checkbox {
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 100px;
+    border: none
+}
+
+.subscribe-form button {
+    border:none;
+    background-color: var(--bcgColor5);
+    color: var(--textColor7);
+    border-radius: 5px;
+    width: 100%;
+    padding: .9rem 0rem;
+    color: var(--textColor2);
+    font-size: .95rem;
+    cursor: pointer;
+    margin-bottom: 3.5rem;
+    border: 1px solid var(--borderColor3);
+    margin-top: 1rem;
+    
+}

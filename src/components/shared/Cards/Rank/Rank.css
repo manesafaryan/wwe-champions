@@ -1,0 +1,12 @@
+.rank-avatar {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: 1px solid var(--borderColor9)
+}
+
+.rank-row {
+    display: flex;
+    align-items: center;
+    width: 80%;
+}

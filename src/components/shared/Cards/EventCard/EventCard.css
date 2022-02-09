@@ -4,14 +4,11 @@
     border-radius: 10px;
     display: flex;
     align-items: center;
-
+    margin: .5rem 0;
 }
 
 .event-card__description {
    margin-left: .5rem;
-   display: flex;
-   flex-direction: column;
-   justify-content: space-between;
 }
 
 .round-icon {
@@ -28,6 +25,7 @@
     color: var(--quartz);
     font-size: .75rem;
     font-weight: 600;
+    margin-bottom: .3rem;
 }
 
 .event-card__about {

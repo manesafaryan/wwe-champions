@@ -26,6 +26,9 @@
   --borderColor8: #343961;
   --textColor5: #E2E4F5;
   --textColor6: #a6acdc;
+  --textColor7: #272b4a;
+  --borderColor9: #00baff;
+  --bcgColor8: #245fdc;
 }
 
 * {
@@ -40,9 +43,10 @@ path {
 
 body {
   margin: 0;
-  font-family: "Poppins", sans-serif !important;
+  font-family: "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bcgColor1);
 }
 
 code {

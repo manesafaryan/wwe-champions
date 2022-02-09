@@ -1,0 +1,10 @@
+.rankcard-header {
+    display: flex;
+    background-color: var(--bcgColor3);
+    height: 6.5rem;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+}

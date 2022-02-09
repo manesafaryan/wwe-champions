@@ -1,0 +1,16 @@
+.rankcard-container {
+    background-color: var(--bcgColor5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.rankcard__classification {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: var(--textColor2);
+    font-size: .75rem;
+    font-weight: 500;
+}

@@ -1,0 +1,5 @@
+.top-player-card {
+  background: hsla(0, 0%, 100%, 0.08);
+  border-radius: 5px;
+  border: 1px solid hsla(0, 0%, 100%, 0.3);
+}
