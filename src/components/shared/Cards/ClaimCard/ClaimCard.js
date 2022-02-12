@@ -2,13 +2,12 @@ import "./ClaimCard.css";
 import Ordinary from "../../Buttons/OrdinaryBtn/OrdinaryBtn";
 
 export default function ClaimCard({ title, description, img, background }) {
+  console.log("IM RENDERING")
   return (
     <div
       className="claim-card"
       style={{
-        background: "url(" + `/images/${background}` + ")",
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
+        backgroundImage: "url(" + `/images/${background}` + ")",
       }}
     >
       <div className="claim-card__content">

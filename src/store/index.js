@@ -1,5 +1,12 @@
-import { createStore } from "redux";
+import { createStore, combineReducers } from "redux";
 import themeReducer from "../reducers/themeReducer";
-import combineReducers from "redux";
+import loginReducer from "../reducers/loginReducer";
+import userReducer from "../reducers/userReducer"
 
-export const store = createStore(themeReducer);
+let rootReducer = combineReducers({
+  isLogedin: loginReducer,
+  theme: themeReducer,
+  currentUser: userReducer
+});
+
+export const store = createStore(rootReducer);

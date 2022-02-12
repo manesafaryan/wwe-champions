@@ -6,3 +6,6 @@ export const DARK = "DARK"
 export const LOGIN = "LOGIN"
 export const LOGOUT = "LOGOUT"
 
+// 
+export const SUCCESS_LOGIN = "SUCCESS_LOGIN" 
+export const FAILED_LOGIN = "ERROR_LOGIN" 

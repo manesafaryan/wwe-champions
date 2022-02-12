@@ -1,0 +1,28 @@
+.user-point {
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    background-color: var(--bcgColor5);
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    border-radius: 7px;
+}
+
+.user-point__data{
+    display: flex;
+    align-items: center;
+}
+
+.user-point__add {
+    color: var(--textColor8);
+    width: 1rem;
+    height: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: var(--bcgColor9);
+    font-weight: 500;
+    outline: .3rem solid var(--textColor8);
+}

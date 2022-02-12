@@ -46,7 +46,7 @@ export default function Main() {
 
   return (
     <Router>
-      <div className="container">
+      <div className="main-container">
         <LeftSideBar />
         <Header opacity={opacity}/>
         <main className="main" ref={mainRef}>

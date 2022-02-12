@@ -1,6 +1,8 @@
-export default function setColorsValues(colors) {
+import { colors } from "../../constants/colors.constant";
+
+export default function setColorsValues(theme) {
   const styles = document.documentElement.style;
-  Object.entries(colors).map(([color, value]) => {
+  Object.entries(colors[theme]).map(([color, value]) => {
     styles.setProperty(color, value);
   });
 }

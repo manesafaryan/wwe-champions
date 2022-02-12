@@ -48,5 +48,8 @@
   .main-header {
     grid-column-start: 1;
     grid-column-end: 4;
+    display: flex;
+    justify-content: space-between;
   }
 }
+

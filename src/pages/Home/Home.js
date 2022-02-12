@@ -13,10 +13,13 @@ import { topPlayers } from "../../constants/topPlayers.constant";
 import { topFactions } from "../../constants/topFactions.constant";
 import RankCard from "../../components/shared/Cards/RankCard/RankCard";
 import RankCardHeader from "../../components/shared/Cards/RankCardHeader/RankCardHeader";
+import { claim } from "../../constants/claim.constant";
+import { DARK, LIGHT } from "../../actions/constants";
+import { useSelector } from "react-redux";
 
 export default function Home() {
   const [slideIndex, setSlideIndex] = useState(0);
-  
+
   const toNext = () => {
     setSlideIndex((prev) => prev + 1);
   };
@@ -24,6 +27,8 @@ export default function Home() {
   const toPrev = () => {
     setSlideIndex((prev) => prev - 1);
   };
+
+  const theme = useSelector((state) => state.theme);
 
   return (
     <div className="home">
@@ -58,34 +63,27 @@ export default function Home() {
       </div>
       <div className="content">
         <div
-          className="swipper"
+          className="swipper p-absolute"
           style={{ transform: `translateX(-${slideIndex * (100 / 6)})` }}
         >
-          <button className="prev" style={{ display: "none" }} onClick={toPrev}>
-            prev
-          </button>
-          <ClaimCard
-            title="FREE CLAIM"
-            description="New Free Claim Available In Shop"
-            img="claim-card-image.png"
-            background={`claim-card-back.png`}
-          />
-          <ClaimCard
-            title="NEW OFFER"
-            description="New Offer Available In Shop"
-            img="widget-offer-card-image.png"
-            background={`claim-card-back.png`}
-          />
-          <button className="next" onlick={toNext}>
-            next
-          </button>
+          {claim.map((card) => (
+            <ClaimCard
+              title={card.title}
+              description={card.description}
+              img={card.img}
+              background={
+                theme === DARK ? card.background_dark : card.background_light
+              }
+            />
+          ))}
+          <div className="widget-event">
+            <span className="">Live</span>
+            <span>FACTION FEUD</span>
+            <p>Hall of Fame Flash Feud</p>
+            <Link to={"/Lideroard"}></Link>
+          </div>
         </div>
-        <div className="widget-event">
-          <span className="">Live</span>
-          <span>FACTION FEUD</span>
-          <p>Hall of Fame Flash Feud</p>
-          <Link to={"/Lideroard"}></Link>
-        </div>
+
         <div className="top-players"></div>
         <div className="winners">
           <h2>Last Faction Feud Winners</h2>

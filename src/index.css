@@ -4,7 +4,7 @@
   --bcgColor2: #18ace2;
   --bcgColor3: #1f233f;
   --rhino: #343961;
-  --quartz: #E2E4F5;
+  --quartz: #e2e4f5;
   --borderColor1: rgb(173, 173, 173);
   --borderColor2: #31365e;
   --bcgColor4: #18ace2;
@@ -18,17 +18,18 @@
   --bcgColor5: #272b4a;
   --textColor4: #4f5794;
   --borderColor5: #4f5794;
-  --textColor4: #B4BAE9;
-  --bcgColor6: #E6ECF5;
-  --borderColor6: #C0CADB;
+  --textColor4: #b4bae9;
+  --bcgColor6: #e6ecf5;
+  --borderColor6: #c0cadb;
   --bcgColor7: #31365e;
   --borderColor7: #6a73b5;
   --borderColor8: #343961;
-  --textColor5: #E2E4F5;
+  --textColor5: #e2e4f5;
   --textColor6: #a6acdc;
   --textColor7: #272b4a;
   --borderColor9: #00baff;
   --bcgColor8: #245fdc;
+  --bcgColor9: #12eeb1;
 }
 
 * {
@@ -47,6 +48,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--bcgColor1);
+  overflow-x: hidden;
 }
 
 code {
@@ -54,3 +56,127 @@ code {
     monospace;
 }
 
+.t-1 {
+  color: var(--textColor4);
+}
+
+.t-2 {
+  color: var(--quartz);
+}
+
+.f-1,
+.f-2 {
+  font-size: 0.65rem;
+}
+
+.f-2 {
+  font-weight: 500;
+}
+
+.f-3 {
+  font-size: 0.5rem;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.p-l-r-1 {
+  padding: 0 1rem;
+}
+
+.d-none {
+  display: none;
+}
+
+.b-radius-full {
+  border-radius: 50%;
+}
+
+.w-5 {
+  width: 4rem;
+}
+
+.h-5 {
+  height: 4rem;
+}
+
+.w-1 {
+  width: 5rem;
+}
+
+.h-1 {
+  height: 5rem;
+}
+
+.p-1 {
+  padding: 1rem;
+}
+
+.w-3 {
+  width: .8rem;
+}
+
+.h-3 {
+  height: .8rem;
+}
+
+.background-1 {
+  background-color: var(--bcgColor3);
+}
+
+.background-2 {
+  background-color: var(--bcgColor2);
+}
+
+.background-3 {
+  background-color: var(--bcgColor9);
+}
+
+.border-1 {
+  border: 2px solid var(--bcgColor5);
+}
+
+.p-fixed {
+  position: fixed
+}
+
+.h-6{
+  height: 4.5rem
+}
+
+.background-4{
+  background-color: var(--bcgColor3)
+}
+
+.w-17{
+  width: 17.5rem
+}
+
+.m-t-5 {
+  margin-top: 6rem
+}
+
+.p-absolute {
+  position: absolute;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

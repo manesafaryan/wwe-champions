@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import React from "react";
 import { useState, useRef, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import "./LeftSideBar.css";
 import SideBarItem from "../../components/SideBarItem/SideBarItem";
 import { apple, googlePlay, moon, sun } from "../../assets/icons/icons";
@@ -9,33 +10,18 @@ import Logo from "../../components/shared/Logo/Logo";
 import Store from "../../components/shared/Buttons/Store/Store";
 import PlayButton from "../../components/shared/Buttons/PlayButton/PlayButton";
 import { LIGHT, DARK } from "../../actions/constants";
-import { useDispatch, useSelector } from "react-redux";
 import { changeTheme } from "../../actions/themes";
 import setColorsValues from "../../util/helpers/colorValuesSetter";
-import { colors } from "../../constants/colors.constant";
 import setLocalStorage from "../../util/helpers/setLocalStorage";
 
 const LeftSideBar = React.memo(function LefttSideBar() {
-  const [actives, setActives] = useState([
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-  ]);
+  const [actives, setActives] = useState(Array(10).fill(false));
   const [buttonClass, setButtonClass] = useState("");
   const sideBarRef = useRef();
   const buttonRef = useRef(null);
   const dispatch = useDispatch();
-  let theme = useSelector((state) => state.theme);
 
-  console.log(theme)
+  let theme = useSelector((state) => state.theme);
 
   const handleScroll = ({ target }) => {
     const position = target.scrollTop;
@@ -54,7 +40,7 @@ const LeftSideBar = React.memo(function LefttSideBar() {
 
   useEffect(() => {
     setLocalStorage("theme", theme)
-    setColorsValues(colors[theme])
+    setColorsValues(theme)
   }, [theme]);
 
   useEffect(() => {
@@ -70,7 +56,8 @@ const LeftSideBar = React.memo(function LefttSideBar() {
 
   return (
     <aside ref={sideBarRef} className="left-sidebar">
-      <Logo />
+      <div className="left-sidebar__logo"><Logo /></div>
+      
       <div className="button-container">
         <PlayButton buttonClass={buttonClass} />
       </div>

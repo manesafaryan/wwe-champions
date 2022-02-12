@@ -36,6 +36,7 @@
   max-width: 100%;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  cursor: pointer;
 }
 
 .news-card__content {
@@ -56,4 +57,5 @@
     background-color: var(--bcgColor1);
     border: 1px solid var(--borderColor2);
     border-radius: 5px;
+    cursor: pointer;
 }

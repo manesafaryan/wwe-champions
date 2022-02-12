@@ -1,18 +1,15 @@
 .logo-container {
-  margin-bottom: 1.5rem;
   display: flex;
-  padding-top: 1.3rem;
-  width: 85%;
+  width: 100%;
   align-items: center;
 }
 
 .image {
-  height: 45px;
-  width: 45px;
+  height: 35px;
+  width: 35px;
 }
 
 .home-page {
-  margin-left: 0.5rem;
   font-size: 0.8rem;
   color: var(--quartz);
   font-weight: 500;
@@ -27,20 +24,3 @@
   color: var(--blue);
 }
 
-
-[class^="icon-"],
-[class*=" icon-"] {
-  font-family: "icomoon" !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-verified::before {
-  content: "\e95d";
-}

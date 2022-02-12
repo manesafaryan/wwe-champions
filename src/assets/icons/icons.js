@@ -316,23 +316,23 @@ export function event() {
       <path
         d="M4.83337 4.83334H13.1667"
         stroke="#00BAFF"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       ></path>
       <path
         d="M8.99996 12.4692L10.2533 13.1275C10.4975 13.2558 10.7825 13.0483 10.7358 12.7767L10.4966 11.3808L11.5108 10.3933C11.7083 10.2008 11.5991 9.86584 11.3266 9.82584L9.92496 9.6225L9.29829 8.35167C9.17663 8.10417 8.82329 8.10417 8.70163 8.35167L8.07496 9.6225L6.67329 9.82667C6.40079 9.86584 6.29163 10.2017 6.48913 10.3942L7.50329 11.3817L7.26413 12.7775C7.21746 13.0492 7.50246 13.2567 7.74663 13.1283L8.99996 12.4692"
         stroke="#00BAFF"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       ></path>
       <path
         d="M14.8333 1.63H3.16667C2.24583 1.63 1.5 2.37584 1.5 3.29667V14.8333C1.5 15.7542 2.24583 16.5 3.16667 16.5H14.8333C15.7542 16.5 16.5 15.7542 16.5 14.8333V3.29667C16.5 2.37584 15.7542 1.63 14.8333 1.63V1.63Z"
         stroke="#00BAFF"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       ></path>
     </svg>
   );
@@ -362,8 +362,8 @@ export function medal() {
           y2="0"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFEDAD"></stop>
-          <stop offset="1" stop-color="#FFFFE5"></stop>
+          <stop stopColor="#FFEDAD"></stop>
+          <stop offset="1" stopColor="#FFFFE5"></stop>
         </linearGradient>
         <linearGradient
           id="prefix__paint1_linear"
@@ -373,8 +373,8 @@ export function medal() {
           y2="11.383"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FD5900"></stop>
-          <stop offset="1" stop-color="#FFDE00"></stop>
+          <stop stopColor="#FD5900"></stop>
+          <stop offset="1" stopColor="#FFDE00"></stop>
         </linearGradient>
         <linearGradient
           id="prefix__paint2_linear"
@@ -384,8 +384,8 @@ export function medal() {
           y2="15.165"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFEDAD"></stop>
-          <stop offset="1" stop-color="#FFFFE5"></stop>
+          <stop stopColor="#FFEDAD"></stop>
+          <stop offset="1" stopColor="#FFFFE5"></stop>
         </linearGradient>
       </defs>
     </svg>
@@ -395,7 +395,7 @@ export function medal() {
 export function topTrophy() {
   return (
     <svg width="32" height="32" fill="none" viewBox="0 0 32 32">
-      <g clip-path="url(#prefix__clip1)">
+      <g clipPath="url(#prefix__clip1)">
         <path
           fill="url(#prefix__paint0_linear)"
           d="M9.69 16.043c-4.71-1.84-7.752-6.298-7.752-11.355 0-.519.419-.938.937-.938h5.472c.518 0 .938.42.938.938s-.42.937-.938.937H3.854c.346 3.886 2.828 7.229 6.52 8.67.48.19.72.733.531 1.216-.19.485-.737.718-1.215.532z"
@@ -430,8 +430,8 @@ export function topTrophy() {
           y2="3.75"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFEDAD"></stop>
-          <stop offset="1" stop-color="#FFFFE5"></stop>
+          <stop stopColor="#FFEDAD"></stop>
+          <stop offset="1" stopColor="#FFFFE5"></stop>
         </linearGradient>
         <linearGradient
           id="prefix__paint1_linear"
@@ -441,8 +441,8 @@ export function topTrophy() {
           y2="3.75"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFEDAD"></stop>
-          <stop offset="1" stop-color="#FFFFE5"></stop>
+          <stop stopColor="#FFEDAD"></stop>
+          <stop offset="1" stopColor="#FFFFE5"></stop>
         </linearGradient>
         <linearGradient
           id="prefix__paint2_linear"
@@ -452,8 +452,8 @@ export function topTrophy() {
           y2="18.449"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFEDAD"></stop>
-          <stop offset="1" stop-color="#FFFFE5"></stop>
+          <stop stopColor="#FFEDAD"></stop>
+          <stop offset="1" stopColor="#FFFFE5"></stop>
         </linearGradient>
         <linearGradient
           id="prefix__paint3_linear"
@@ -463,8 +463,8 @@ export function topTrophy() {
           y2="0"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FD5900"></stop>
-          <stop offset="1" stop-color="#FFDE00"></stop>
+          <stop stopColor="#FD5900"></stop>
+          <stop offset="1" stopColor="#FFDE00"></stop>
         </linearGradient>
         <linearGradient
           id="prefix__paint4_linear"
@@ -474,8 +474,8 @@ export function topTrophy() {
           y2="5.636"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFE59A"></stop>
-          <stop offset="1" stop-color="#FFFFD5"></stop>
+          <stop stopColor="#FFE59A"></stop>
+          <stop offset="1" stopColor="#FFFFD5"></stop>
         </linearGradient>
         <linearGradient
           id="prefix__paint5_linear"
@@ -485,8 +485,8 @@ export function topTrophy() {
           y2="24.375"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FD5900"></stop>
-          <stop offset="1" stop-color="#FFDE00"></stop>
+          <stop stopColor="#FD5900"></stop>
+          <stop offset="1" stopColor="#FFDE00"></stop>
         </linearGradient>
         <clipPath id="prefix__clip0">
           <path fill="#fff" d="M0 0H32V32H0z"></path>
@@ -494,4 +494,80 @@ export function topTrophy() {
       </defs>
     </svg>
   );
+}
+
+export function burger() {
+  return (
+    <svg
+      fill="#fff"
+      version="1.1"
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      viewBox="0 0 20 20"
+    >
+      <title>menu</title>
+      <path d="M0 3h20v2h-20v-2zM0 9h20v2h-20v-2zM0 15h20v2h-20v-2z"></path>
+    </svg>
+  );
+}
+
+export function users() {
+  return (
+    <svg
+      fill="#fff"
+      version="1.1"
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+    >
+      <title>users</title>
+      <path d="M18 21v-2c0-1.38-0.561-2.632-1.464-3.536s-2.156-1.464-3.536-1.464h-8c-1.38 0-2.632 0.561-3.536 1.464s-1.464 2.156-1.464 3.536v2c0 0.552 0.448 1 1 1s1-0.448 1-1v-2c0-0.829 0.335-1.577 0.879-2.121s1.292-0.879 2.121-0.879h8c0.829 0 1.577 0.335 2.121 0.879s0.879 1.292 0.879 2.121v2c0 0.552 0.448 1 1 1s1-0.448 1-1zM14 7c0-1.38-0.561-2.632-1.464-3.536s-2.156-1.464-3.536-1.464-2.632 0.561-3.536 1.464-1.464 2.156-1.464 3.536 0.561 2.632 1.464 3.536 2.156 1.464 3.536 1.464 2.632-0.561 3.536-1.464 1.464-2.156 1.464-3.536zM12 7c0 0.829-0.335 1.577-0.879 2.121s-1.292 0.879-2.121 0.879-1.577-0.335-2.121-0.879-0.879-1.292-0.879-2.121 0.335-1.577 0.879-2.121 1.292-0.879 2.121-0.879 1.577 0.335 2.121 0.879 0.879 1.292 0.879 2.121zM24 21v-2c-0.001-1.245-0.457-2.385-1.215-3.261-0.652-0.753-1.528-1.311-2.529-1.576-0.534-0.141-1.081 0.177-1.222 0.711s0.177 1.081 0.711 1.222c0.607 0.161 1.136 0.498 1.528 0.952 0.454 0.526 0.726 1.206 0.727 1.952v2c0 0.552 0.448 1 1 1s1-0.448 1-1zM15.752 4.099c0.803 0.206 1.445 0.715 1.837 1.377s0.531 1.47 0.325 2.273c-0.176 0.688-0.575 1.256-1.105 1.652-0.314 0.235-0.675 0.409-1.063 0.511-0.534 0.14-0.854 0.687-0.713 1.221s0.687 0.854 1.221 0.713c0.637-0.167 1.232-0.455 1.752-0.844 0.884-0.66 1.552-1.613 1.845-2.758 0.342-1.337 0.11-2.689-0.542-3.788s-1.725-1.953-3.062-2.296c-0.535-0.137-1.080 0.186-1.217 0.721s0.186 1.080 0.721 1.217z"></path>
+    </svg>
+  );
+}
+
+export function battery() {
+  return (
+    <svg
+      fill="#ffa800"
+      version="1.1"
+      xmlns="http://www.w3.org/2000/svg"
+      width="18"
+      height="18"
+      viewBox="0 0 24 24"
+    >
+      <title>battery_charging_full</title>
+      <path d="M11.016 20.016l3.984-7.5h-2.016v-5.531l-3.984 7.5h2.016v5.531zM15.656 3.984q0.563 0 0.961 0.398t0.398 0.961v15.328q0 0.563-0.398 0.938t-0.961 0.375h-7.313q-0.563 0-0.961-0.375t-0.398-0.938v-15.328q0-0.563 0.398-0.961t0.961-0.398h1.641v-1.969h4.031v1.969h1.641z"></path>
+    </svg>
+  );
+}
+
+export function diamond() {
+  return (
+    <svg
+      fill="#c055ff"
+      version="1.1"
+      xmlns="http://www.w3.org/2000/svg"
+      width="15"
+      height="15"
+      viewBox="0 0 32 28"
+    >
+      <title>diamond</title>
+      <path d="M3.313 12l9.734 10.391-4.688-10.391h-5.047zM16 24.063l5.453-12.063h-10.906zM8.406 10l3.187-6h-4.094l-4.5 6h5.406zM18.953 22.391l9.734-10.391h-5.047zM10.672 10h10.656l-3.187-6h-4.281zM23.594 10h5.406l-4.5-6h-4.094zM25.797 2.406l6 8c0.297 0.375 0.266 0.922-0.063 1.281l-15 16c-0.187 0.203-0.453 0.313-0.734 0.313s-0.547-0.109-0.734-0.313l-15-16c-0.328-0.359-0.359-0.906-0.063-1.281l6-8c0.187-0.266 0.484-0.406 0.797-0.406h18c0.313 0 0.609 0.141 0.797 0.406z"></path>
+    </svg>
+  );
+}
+
+export function w() {
+  return(
+    <div className="b-radius-full f-3 background-2 bg-sky-600 w-3 h-3 d-flex align-center justify-center"><p className='text-white text-xs'>W</p></div>
+  )
+}
+
+export function p() {
+  return(
+    <div className="b-radius-full t-2 background-3 f-3 bg-green-500 w-3 h-3 d-flex align-center justify-center"><p className='text-white text-xs'>P</p></div>
+  )
 }
