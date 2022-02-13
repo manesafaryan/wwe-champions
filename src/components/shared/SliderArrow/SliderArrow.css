@@ -1,0 +1,11 @@
+.arrow {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+    background-color: var(--bcgColor7);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}

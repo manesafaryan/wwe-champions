@@ -1,5 +1,8 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 import Store from "../../components/shared/Buttons/Store/Store";
 import { apple, googlePlay, medal, topTrophy } from "../../assets/icons/icons";
 import "./Home.css";
@@ -16,19 +19,30 @@ import RankCardHeader from "../../components/shared/Cards/RankCardHeader/RankCar
 import { claim } from "../../constants/claim.constant";
 import { DARK, LIGHT } from "../../actions/constants";
 import { useSelector } from "react-redux";
+import SliderArrow from "../../components/shared/SliderArrow/SliderArrow";
 
 export default function Home() {
-  const [slideIndex, setSlideIndex] = useState(0);
-
-  const toNext = () => {
-    setSlideIndex((prev) => prev + 1);
-  };
-
-  const toPrev = () => {
-    setSlideIndex((prev) => prev - 1);
-  };
-
   const theme = useSelector((state) => state.theme);
+  const sliderRef = useRef(null)
+
+ const next = () => {
+    sliderRef.slickNext();
+  }
+  const previous = () => {
+    sliderRef.slickPrev();
+  }
+
+  const settings = {
+    dots: false,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    adaptiveHeight: true,
+    className: "slider",
+    nextArrow: <SliderArrow arrow=">" onclick={next} />,
+    prevArrow: <SliderArrow arrow="<" onclick={previous} />
+  };
 
   return (
     <div className="home">
@@ -61,29 +75,26 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="content">
-        <div
-          className="swipper p-absolute"
-          style={{ transform: `translateX(-${slideIndex * (100 / 6)})` }}
-        >
-          {claim.map((card) => (
-            <ClaimCard
-              title={card.title}
-              description={card.description}
-              img={card.img}
-              background={
-                theme === DARK ? card.background_dark : card.background_light
-              }
-            />
-          ))}
-          <div className="widget-event">
-            <span className="">Live</span>
-            <span>FACTION FEUD</span>
-            <p>Hall of Fame Flash Feud</p>
-            <Link to={"/Lideroard"}></Link>
-          </div>
-        </div>
+      <div>
+          <Slider {...settings} ref={sliderRef}>
 
+            {claim.map((card) => (
+              <ClaimCard
+                title={card.title}
+                description={card.description}
+                img={card.img}
+                background={
+                  theme === DARK ? card.background_dark : card.background_light
+                }
+              />
+            ))}
+            <div className="widget-event">
+              <span className="">Live</span>
+              <span>FACTION FEUD</span>
+              <p>Hall of Fame Flash Feud</p>
+              <Link to={"/Lideroard"}></Link>
+            </div>
+          </Slider>
         <div className="top-players"></div>
         <div className="winners">
           <h2>Last Faction Feud Winners</h2>

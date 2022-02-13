@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 
 export default function useToggle(initalVal, ref) {
   const [open, setOpen] = useState(initalVal)
+  
   const handleClickOutside = (event) => {
     if (ref.current && !ref.current.contains(event.target)) {
       setOpen(false);

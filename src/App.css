@@ -12,6 +12,7 @@
   grid-row-end: 3;
   background-color: var(--bcgColor1);
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .main::-webkit-scrollbar {

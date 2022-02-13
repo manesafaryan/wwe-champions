@@ -561,13 +561,32 @@ export function diamond() {
 }
 
 export function w() {
-  return(
-    <div className="b-radius-full f-3 background-2 bg-sky-600 w-3 h-3 d-flex align-center justify-center"><p className='text-white text-xs'>W</p></div>
-  )
+  return (
+    <div className="b-radius-full f-3 background-2 bg-sky-600 w-3 h-3 d-flex align-center justify-center">
+      <p className="text-white text-xs">W</p>
+    </div>
+  );
 }
 
 export function p() {
-  return(
-    <div className="b-radius-full t-2 background-3 f-3 bg-green-500 w-3 h-3 d-flex align-center justify-center"><p className='text-white text-xs'>P</p></div>
-  )
+  return (
+    <div className="b-radius-full t-2 background-3 f-3 bg-green-500 w-3 h-3 d-flex align-center justify-center">
+      <p className="text-white text-xs">P</p>
+    </div>
+  );
+}
+
+export function pen() {
+  return (
+    <svg
+      fill="#e2e4f5"
+      version="1.1"
+      xmlns="http://www.w3.org/2000/svg"
+      width="15"
+      height="15"
+      viewBox="0 0 32 32"
+    >
+      <path d="M24.485 24.485l-4.243-1.414-14.141-14.142 2.828-2.829 14.142 14.142 1.414 4.243z"></path>
+    </svg>
+  );
 }
