@@ -23,15 +23,6 @@ import SliderArrow from "../../components/shared/SliderArrow/SliderArrow";
 
 export default function Home() {
   const theme = useSelector((state) => state.theme);
-  const sliderRef = useRef(null)
-
- const next = () => {
-    sliderRef.slickNext();
-  }
-  const previous = () => {
-    sliderRef.slickPrev();
-  }
-
   const settings = {
     dots: false,
     infinite: false,
@@ -40,8 +31,8 @@ export default function Home() {
     slidesToScroll: 1,
     adaptiveHeight: true,
     className: "slider",
-    nextArrow: <SliderArrow arrow=">" onclick={next} />,
-    prevArrow: <SliderArrow arrow="<" onclick={previous} />
+    nextArrow: <SliderArrow arrow=">" className="next"/>,
+    prevArrow: <SliderArrow arrow="<" className="prev"/>
   };
 
   return (
@@ -76,7 +67,7 @@ export default function Home() {
         </div>
       </div>
       <div>
-          <Slider {...settings} ref={sliderRef}>
+          <Slider {...settings}>
 
             {claim.map((card) => (
               <ClaimCard

@@ -7,6 +7,8 @@ import Home from "./pages/Home/Home";
 import "./App.css";
 import Dashboard from "./pages/DashBoard/DashBoard";
 import { useRef } from "react/cjs/react.development";
+import { useDispatch } from "react-redux";
+import handleUserLogin from "./store/login/operations";
 
 const events = {
   today: [
@@ -29,12 +31,13 @@ export default function Main() {
   const mainRef = useRef();
   const [opacity, setOpacity] = useState(0);
 
+  const dispatch = useDispatch();
+
   const handleScroll = ({ target }) => {
     const position = target.scrollTop;
     if (position < 100) {
       setOpacity(position / 100);
-    }
-    else setOpacity(1)
+    } else setOpacity(1);
   };
 
   useEffect(() => {
@@ -44,11 +47,15 @@ export default function Main() {
     };
   }, []);
 
+  useEffect(() => {
+    dispatch(handleUserLogin());
+  }, []);
+
   return (
     <Router>
       <div className="main-container">
         <LeftSideBar />
-        <Header opacity={opacity}/>
+        <Header opacity={opacity} />
         <main className="main" ref={mainRef}>
           <Routes>
             <Route exact path="/" element={<Home />} />

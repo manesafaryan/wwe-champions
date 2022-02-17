@@ -11,3 +11,14 @@
     padding-right: 5rem;
 
 }
+
+.rankcard-header__icon  {
+    border-radius: 50%;
+    background-color: var(--bcgColor7);
+    height: 3.5rem;
+    width: 5.4rem;
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

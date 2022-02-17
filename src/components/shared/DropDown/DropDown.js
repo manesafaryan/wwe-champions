@@ -1,9 +1,12 @@
 import { useEffect, useRef } from "react";
 import useToggle from "../../../hooks/useToggle";
+import "./DropDown.css"
 
 export default function DropDown({ render, open }) {
   const dropdownRef = useRef(null);
   const [dropdownOpen, setDropdownOpen] = useToggle(false, dropdownRef);
+
+  console.log(open, "aaaa")
 
   useEffect(() => {
     setDropdownOpen(open);
@@ -13,9 +16,9 @@ export default function DropDown({ render, open }) {
     <>
       <div
         ref={dropdownRef}
-        className={`login-dropdown ` + (dropdownOpen ? "" : "d-none")}
+        className={`dropdown ` + (dropdownOpen ? "" : "d-none")}
       >
-        <div className="login-dropdown__triangle"></div>
+        <div className="dropdown__triangle"></div>
         {render()}
       </div>
     </>

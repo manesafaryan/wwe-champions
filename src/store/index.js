@@ -1,12 +1,13 @@
-import { createStore, combineReducers } from "redux";
-import themeReducer from "../reducers/themeReducer";
-import loginReducer from "../reducers/loginReducer";
-import userReducer from "../reducers/userReducer"
+import  loginSlice from "./login/loginSlice";
+import  themeSlice from "./themeSlice";
+import  userSlice  from "./userSlice";
 
-let rootReducer = combineReducers({
-  isLogedin: loginReducer,
-  theme: themeReducer,
-  currentUser: userReducer
+import { configureStore } from "@reduxjs/toolkit";
+
+export const store = configureStore({
+  reducer: {
+    isLogedin: loginSlice.reducer,
+    theme: themeSlice.reducer,
+    currentUser: userSlice.reducer,
+  },
 });
-
-export const store = createStore(rootReducer);

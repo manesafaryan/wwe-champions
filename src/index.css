@@ -30,6 +30,7 @@
   --borderColor9: #00baff;
   --bcgColor8: #245fdc;
   --bcgColor9: #12eeb1;
+  --bcgColor10: #212541;
 }
 
 * {
@@ -102,7 +103,7 @@ code {
 }
 
 .d-none {
-  display: none;
+  display: none !important
 }
 
 .b-radius-full {
@@ -175,6 +176,10 @@ code {
 
 .p-absolute {
   position: absolute;
+}
+
+.m-r-1 {
+  margin-right: .5rem
 }
 
 @tailwind base;

@@ -582,8 +582,8 @@ export function pen() {
       fill="#e2e4f5"
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
-      width="15"
-      height="15"
+      width="20"
+      height="20"
       viewBox="0 0 32 32"
     >
       <path d="M24.485 24.485l-4.243-1.414-14.141-14.142 2.828-2.829 14.142 14.142 1.414 4.243z"></path>

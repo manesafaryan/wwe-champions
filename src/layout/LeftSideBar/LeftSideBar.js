@@ -9,15 +9,16 @@ import Logo from "../../components/shared/Logo/Logo";
 import Store from "../../components/shared/Buttons/Store/Store";
 import PlayButton from "../../components/shared/Buttons/PlayButton/PlayButton";
 import { LIGHT, DARK } from "../../actions/constants";
-import { changeTheme } from "../../actions/themes";
 import setColorsValues from "../../util/helpers/colorValuesSetter";
 import setLocalStorage from "../../util/helpers/setLocalStorage";
+import themeSlice from "../../store/themeSlice";
 
 const LeftSideBar = React.memo(function LefttSideBar() {
   const [actives, setActives] = useState(Array(10).fill(false));
   const [buttonClass, setButtonClass] = useState("");
   const sideBarRef = useRef();
   const buttonRef = useRef(null);
+
   const dispatch = useDispatch();
 
   let theme = useSelector((state) => state.theme);
@@ -34,7 +35,7 @@ const LeftSideBar = React.memo(function LefttSideBar() {
   };
 
   let switchTheme = (theme) => () => {
-    dispatch(changeTheme(theme));
+    dispatch(themeSlice.actions.change(theme));
   };
 
   useEffect(() => {
@@ -115,6 +116,6 @@ const LeftSideBar = React.memo(function LefttSideBar() {
       </div>
     </aside>
   );
-});
+},);
 
 export default LeftSideBar;

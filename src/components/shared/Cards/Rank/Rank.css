@@ -1,14 +1,68 @@
 .rank-avatar {
-    width: 2rem;
-    height: 2rem;
-    border-radius: 50%;
-    border: 1px solid var(--borderColor9)
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 1px solid var(--borderColor9);
 }
 
 .rank-row {
-    display: flex;
-    align-items: center;
-    width: 80%;
-    height: 4rem;
-    border-radius: 10px;
+  display: flex;
+  align-items: center;
+  width: 90%;
+  height: 4.5rem;
+  border-radius: 10px;
+  position: relative;
+}
+
+.rank {
+  position: absolute;
+  font-size: 0.6rem;
+}
+
+.diamond-horizon {
+  width: 1rem;
+  height: 0.15rem;
+  border-radius: 0.8px;
+}
+
+.diamond {
+  display: flex;
+  position: relative;
+  margin-bottom: 0.8rem;
+  margin-right: 0.5rem;
+  left: -4.5px;
+}
+
+.diamond-top-left,
+.diamond-top-right {
+  background-color: inherit;
+  position: absolute;
+  width: 0.5rem;
+  height: 0.15rem;
+  left: -35%;
+  transform: rotate(135deg);
+  margin-top: 0.15rem;
+}
+
+.diamond-top-right {
+  transform: rotate(45deg);
+  left: 85%;
+}
+
+.diamond-bottom-left,
+.diamond-bottom-right {
+  background-color: inherit;
+
+  position: absolute;
+  width: 1.174rem;
+  height: 0.15rem;
+  transform: rotate(45deg);
+  margin-top: 0.67rem;
+  left: -45%;
+}
+
+.diamond-bottom-right {
+  margin-top: 0.68rem;
+  transform: rotate(135deg);
+  left: 25%;
 }

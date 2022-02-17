@@ -1,6 +1,6 @@
 .arrow {
-    width: 2rem;
-    height: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
     border-radius: 100%;
     background-color: var(--bcgColor7);
     color: white;
@@ -8,4 +8,9 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    position: absolute;
+}
+
+.slick-disabled-arrow {
+    display: none;
 }

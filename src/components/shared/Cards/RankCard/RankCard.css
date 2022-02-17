@@ -18,4 +18,5 @@
     color: var(--textColor2);
     font-size: .75rem;
     font-weight: 500;
+    width: 95%;
 }
