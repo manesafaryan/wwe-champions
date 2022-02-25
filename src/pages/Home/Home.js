@@ -1,7 +1,6 @@
-import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Store from "../../components/shared/Buttons/Store/Store";
 import { apple, googlePlay, medal, topTrophy } from "../../assets/icons/icons";
@@ -17,7 +16,7 @@ import { topFactions } from "../../constants/topFactions.constant";
 import RankCard from "../../components/shared/Cards/RankCard/RankCard";
 import RankCardHeader from "../../components/shared/Cards/RankCardHeader/RankCardHeader";
 import { claim } from "../../constants/claim.constant";
-import { DARK, LIGHT } from "../../actions/constants";
+import { DARK } from "../../actions/constants";
 import { useSelector } from "react-redux";
 import SliderArrow from "../../components/shared/SliderArrow/SliderArrow";
 
@@ -31,8 +30,8 @@ export default function Home() {
     slidesToScroll: 1,
     adaptiveHeight: true,
     className: "slider",
-    nextArrow: <SliderArrow arrow=">" className="next"/>,
-    prevArrow: <SliderArrow arrow="<" className="prev"/>
+    nextArrow: <SliderArrow arrow=">" />,
+    prevArrow: <SliderArrow arrow="<" />,
   };
 
   return (
@@ -67,9 +66,9 @@ export default function Home() {
         </div>
       </div>
       <div>
-          <Slider {...settings}>
-
-            {claim.map((card) => (
+        <Slider {...settings}>
+          {claim.map((card) => (
+            <div className="slide-item">
               <ClaimCard
                 title={card.title}
                 description={card.description}
@@ -78,14 +77,15 @@ export default function Home() {
                   theme === DARK ? card.background_dark : card.background_light
                 }
               />
-            ))}
-            <div className="widget-event">
-              <span className="">Live</span>
-              <span>FACTION FEUD</span>
-              <p>Hall of Fame Flash Feud</p>
-              <Link to={"/Lideroard"}></Link>
-            </div>
-          </Slider>
+              </div>
+          ))}
+          <div className="widget-event">
+            <span className="">Live</span>
+            <span>FACTION FEUD</span>
+            <p>Hall of Fame Flash Feud</p>
+            <Link to={"/Lideroard"}></Link>
+          </div>
+        </Slider>
         <div className="top-players"></div>
         <div className="winners">
           <h2>Last Faction Feud Winners</h2>
@@ -115,7 +115,6 @@ export default function Home() {
         </div>
         <div className="news">
           <h2 className="news__heading">Latest News & Updates</h2>
-
           <div className="news-container">
             {news.map((item) => (
               <NewsCard

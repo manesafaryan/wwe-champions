@@ -4,11 +4,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 95%;
     padding-bottom: 2rem;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-
+    width: 98%;
 }
 
 .rankcard__classification {

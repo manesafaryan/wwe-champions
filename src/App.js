@@ -7,8 +7,9 @@ import Home from "./pages/Home/Home";
 import "./App.css";
 import Dashboard from "./pages/DashBoard/DashBoard";
 import { useRef } from "react/cjs/react.development";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import handleUserLogin from "./store/login/operations";
+import { I18nProvider, LOCALES } from "./i18n";
 
 const events = {
   today: [
@@ -28,6 +29,9 @@ const events = {
 };
 
 export default function Main() {
+  let lang = useSelector((state) => state.lang);
+  console.log(lang, "gxxxx", LOCALES[lang])
+
   const mainRef = useRef();
   const [opacity, setOpacity] = useState(0);
 
@@ -52,20 +56,22 @@ export default function Main() {
   }, []);
 
   return (
-    <Router>
-      <div className="main-container">
-        <LeftSideBar />
-        <Header opacity={opacity} />
-        <main className="main" ref={mainRef}>
-          <Routes>
-            <Route exact path="/" element={<Home />} />
-          </Routes>
-          <Routes>
-            <Route exact path="/Dashboard" element={<Dashboard />} />
-          </Routes>
-        </main>
-        <RightSideBar events={events} />
-      </div>
-    </Router>
+    <I18nProvider locale={LOCALES[lang]}>
+      <Router>
+        <div className="main-container">
+          <LeftSideBar />
+          <Header opacity={opacity} />
+          <main className="main" ref={mainRef}>
+            <Routes>
+              <Route exact path="/" element={<Home />} />
+            </Routes>
+            <Routes>
+              <Route exact path="/Dashboard" element={<Dashboard />} />
+            </Routes>
+          </main>
+          <RightSideBar events={events} />
+        </div>
+      </Router>
+    </I18nProvider>
   );
 }

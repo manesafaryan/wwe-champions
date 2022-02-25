@@ -5,6 +5,7 @@
   grid-column-start: 2;
   grid-column-end: 3;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   opacity: 1;
 }
@@ -44,6 +45,21 @@
   border: 1px solid var(--borderColor5);
 }
 
+.languageBtn-container {
+  display: flex;
+  position: relative;
+  height: 2rem;
+  width: 4rem;
+  padding: 0.6rem;
+  border: 1px solid var(--borderColor2);
+  border-radius: 5px;
+  margin-right: 0.9rem;
+  justify-content: space-around;
+  background-color: transparent;
+  align-items: center;
+  cursor: pointer;
+}
+
 @media only screen and (max-width: 1280px) {
   .main-header {
     grid-column-start: 1;
@@ -52,4 +68,3 @@
     justify-content: space-between;
   }
 }
-

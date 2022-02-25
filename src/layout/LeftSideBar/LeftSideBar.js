@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useRef, useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import "./LeftSideBar.css";
 import SideBarItem from "../../components/SideBarItem/SideBarItem";
 import { apple, googlePlay, moon, sun } from "../../assets/icons/icons";
@@ -9,17 +9,15 @@ import Logo from "../../components/shared/Logo/Logo";
 import Store from "../../components/shared/Buttons/Store/Store";
 import PlayButton from "../../components/shared/Buttons/PlayButton/PlayButton";
 import { LIGHT, DARK } from "../../actions/constants";
-import setColorsValues from "../../util/helpers/colorValuesSetter";
-import setLocalStorage from "../../util/helpers/setLocalStorage";
+import Switch from "../../components/shared/Switch/Switch";
 import themeSlice from "../../store/themeSlice";
+import setColorsValues from "../../util/helpers/colorValuesSetter";
 
 const LeftSideBar = React.memo(function LefttSideBar() {
   const [actives, setActives] = useState(Array(10).fill(false));
   const [buttonClass, setButtonClass] = useState("");
   const sideBarRef = useRef();
   const buttonRef = useRef(null);
-
-  const dispatch = useDispatch();
 
   let theme = useSelector((state) => state.theme);
 
@@ -34,15 +32,6 @@ const LeftSideBar = React.memo(function LefttSideBar() {
     }
   };
 
-  let switchTheme = (theme) => () => {
-    dispatch(themeSlice.actions.change(theme));
-  };
-
-  useEffect(() => {
-    setLocalStorage("theme", theme)
-    setColorsValues(theme)
-  }, [theme]);
-
   useEffect(() => {
     sideBarRef.current.addEventListener("scroll", handleScroll);
     return () => {
@@ -56,8 +45,9 @@ const LeftSideBar = React.memo(function LefttSideBar() {
 
   return (
     <aside ref={sideBarRef} className="left-sidebar">
-      <div className="left-sidebar__logo"><Logo /></div>
-      
+      <div className="left-sidebar__logo">
+        <Logo />
+      </div>
       <div className="button-container">
         <PlayButton buttonClass={buttonClass} />
       </div>
@@ -99,23 +89,19 @@ const LeftSideBar = React.memo(function LefttSideBar() {
         />
       </div>
       <div className="themeBtn-container">
-        <div
-          className={
-            `switch-btn ` + `${theme === DARK ? "goToLeft" : "goToRight"}`
-          }
-        ></div>
-        <div className="dark" onClick={switchTheme(DARK)}>
-          {moon()}
-          <span>Dark</span>
-        </div>
-
-        <div className="light" onClick={switchTheme(LIGHT)}>
-          {sun()}
-          <span>Light</span>
-        </div>
+        <Switch
+          item1={DARK}
+          item2={LIGHT}
+          icon1={moon()}
+          icon2={sun()}
+          description="theme"
+          value={theme}
+          slice={themeSlice}
+          handler={setColorsValues}
+        />
       </div>
     </aside>
   );
-},);
+});
 
 export default LeftSideBar;

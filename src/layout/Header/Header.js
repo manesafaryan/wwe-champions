@@ -1,9 +1,11 @@
-import { search, users } from "../../assets/icons/icons";
+import { useSelector } from "react-redux";
 import "./Header.css";
+import { search, users } from "../../assets/icons/icons";
 import { burger } from "../../assets/icons/icons";
 import Logo from "../../components/shared/Logo/Logo";
-import { useSelector } from "react-redux";
-import { DARK } from "../../actions/constants";
+import { DARK, en, fr } from "../../actions/constants";
+import Switch from "../../components/shared/Switch/Switch";
+import langSlice from "../../store/langSlice";
 
 function isThemeDark(theme) {
   return theme === DARK;
@@ -11,6 +13,8 @@ function isThemeDark(theme) {
 
 export default function Header({ opacity }) {
   let theme = useSelector((state) => state.theme);
+  let lang = useSelector((state) => state.lang);
+
   let r = isThemeDark(theme) ? 31 : 230;
   let g = isThemeDark(theme) ? 35 : 236;
   let b = isThemeDark(theme) ? 63 : 245;
@@ -33,6 +37,15 @@ export default function Header({ opacity }) {
         />
       </form>
       <div className="d-none">{users()}</div>
+      <div className="languageBtn-container">
+        <Switch
+          item1={en}
+          item2={fr}
+          description="lang"
+          value={lang}
+          slice={langSlice}
+        />
+      </div>
     </header>
   );
 }

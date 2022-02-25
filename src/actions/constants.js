@@ -9,3 +9,8 @@ export const LOGOUT = "LOGOUT"
 // 
 export const SUCCESS_LOGIN = "SUCCESS_LOGIN" 
 export const FAILED_LOGIN = "ERROR_LOGIN" 
+
+// EN / FR
+
+export const en = "en"
+export const fr = "fr"

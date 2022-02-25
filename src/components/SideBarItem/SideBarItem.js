@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import * as icons from "../../assets/icons/icons";
 import "./SideBarItem.css";
+import { FormattedMessage } from "react-intl";
 
 export default function SideBarItem({
   description,
@@ -14,9 +15,11 @@ export default function SideBarItem({
     <li className="nav-item" onClick={activate}>
       <div className={`nav-item_content ${classname}`}>
         <span className="nav-item_icon">{icons[icon]()}</span>
-        <span>{description}</span>
+        <span>
+          <FormattedMessage id={description} />
+        </span>
       </div>
-      {New ? <span className="nav-item_new">NEW</span> : null}
+      {New ? <span className="nav-item_new"><FormattedMessage id="NEW" /></span> : null}
     </li>
   );
 }

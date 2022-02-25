@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./RightSideBar.css";
-import EventsCard from "../../components/shared/Cards/EventsCard/EventsCard";
 import Subscribe from "../../components/Subscribe/Subscribe";
 import { useDispatch, useSelector } from "react-redux";
+import EventsCard from "../../components/shared/Cards/EventsCard/EventsCard";
 import { userPoints } from "../../constants/userPoints.constant";
 import UserPoint from "../../components/shared/Cards/UserPoint/UserPoint";
 import * as icons from "../../assets/icons/icons";
@@ -24,8 +24,6 @@ const RightSideBar = React.memo(function RightSideBar({ events }) {
   let isLogedin = useSelector((state) => state.isLogedin);
   let currentUser = useSelector((state) => state.currentUser);
 
-  console.log("rendered", loginDropDownOpen);
-
   useEffect(() => {
     if (isLogedin) {
       setProcessed(false);
@@ -33,7 +31,6 @@ const RightSideBar = React.memo(function RightSideBar({ events }) {
   }, [isLogedin]);
 
   const toggleDropDown = () => {
-    console.log("handler", loginDropDownOpen);
     setLoginDropDownOpen(!loginDropDownOpen);
   };
 
