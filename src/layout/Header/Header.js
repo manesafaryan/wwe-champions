@@ -18,7 +18,7 @@ export default function Header({ opacity }) {
   let r = isThemeDark(theme) ? 31 : 230;
   let g = isThemeDark(theme) ? 35 : 236;
   let b = isThemeDark(theme) ? 63 : 245;
-
+  
   return (
     <header
       className="main-header"
@@ -43,7 +43,7 @@ export default function Header({ opacity }) {
           item2={fr}
           description="lang"
           value={lang}
-          slice={langSlice}
+          switcher={langSlice.actions.change}
         />
       </div>
     </header>

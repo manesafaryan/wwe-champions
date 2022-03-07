@@ -1,6 +1,8 @@
 import React from "react";
 import { useState, useRef, useEffect } from "react";
+
 import { useSelector } from "react-redux";
+
 import "./LeftSideBar.css";
 import SideBarItem from "../../components/SideBarItem/SideBarItem";
 import { apple, googlePlay, moon, sun } from "../../assets/icons/icons";
@@ -96,7 +98,7 @@ const LeftSideBar = React.memo(function LefttSideBar() {
           icon2={sun()}
           description="theme"
           value={theme}
-          slice={themeSlice}
+          switcher={themeSlice.actions.change}
           handler={setColorsValues}
         />
       </div>

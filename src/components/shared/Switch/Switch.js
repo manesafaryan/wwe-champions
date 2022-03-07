@@ -8,7 +8,7 @@ export default function Switch({
   icon2,
   item1,
   item2,
-  slice,
+  switcher,
   handler,
 }) {
   return (
@@ -20,7 +20,7 @@ export default function Switch({
       ></div>
       <div
         className="item1"
-        onClick={useSwitch(description, item1, slice, handler)}
+        onClick={useSwitch(description, item1, switcher, handler)}
       >
         {icon1 && icon1}
         <span>{item1}</span>
@@ -28,7 +28,7 @@ export default function Switch({
 
       <div
         className="item2"
-        onClick={useSwitch(description, item2, slice, handler)}
+        onClick={useSwitch(description, item2, switcher, handler)}
       >
         {icon2 && icon2}
         <span>{item2}</span>

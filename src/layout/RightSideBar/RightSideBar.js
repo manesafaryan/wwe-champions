@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+
 import "./RightSideBar.css";
 import Subscribe from "../../components/Subscribe/Subscribe";
-import { useDispatch, useSelector } from "react-redux";
 import EventsCard from "../../components/shared/Cards/EventsCard/EventsCard";
 import { userPoints } from "../../constants/userPoints.constant";
 import UserPoint from "../../components/shared/Cards/UserPoint/UserPoint";

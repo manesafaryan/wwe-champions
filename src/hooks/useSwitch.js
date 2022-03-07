@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import setLocalStorage from "../util/helpers/setLocalStorage";
 
-const useSwitch = (valueName, value, slice, handler) => {
+const useSwitch = (valueName, value, switcher, handler) => {
   const dispatch = useDispatch();
   let newValue = useSelector((state) => state[valueName]);
 
@@ -12,7 +12,7 @@ const useSwitch = (valueName, value, slice, handler) => {
   }, [newValue]);
 
   return () => {
-    dispatch(slice.actions.change(value));
+    dispatch(switcher(value));
   };
 };
 
