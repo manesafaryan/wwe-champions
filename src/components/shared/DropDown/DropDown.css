@@ -15,4 +15,18 @@
   height: 9rem;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+}
+
+.dropdown:hover {
+  animation: goBottom 2s;
+}
+
+@keyframes goBottom {
+  0% {
+    height: 0rem;
+  }
+  100% {
+    height: 9rem;
+  }
 }
